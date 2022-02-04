@@ -1,3 +1,6 @@
+<?php 
+require 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +12,29 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="cadastro.php">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pesquisa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Forcedor</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
