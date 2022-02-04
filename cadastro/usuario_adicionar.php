@@ -1,4 +1,4 @@
-<?php require 'header.php'; 
+<?php require '../header.php'; 
 
 $nome = filter_input(INPUT_POST, 'nome');
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
@@ -18,7 +18,7 @@ if($login){
         $sql->bindValue(':email', $email);
         $sql->bindValue(':senha', $senha);        
         $sql->execute();
-        header('location: index.php');
+        header('location: ../index.php');
     }else{
         header('location: usuario.php');
     }
