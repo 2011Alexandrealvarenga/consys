@@ -29,7 +29,7 @@ require 'config.php';
                                     <a class="dropdown-item" href="#">Carro</a>
                                     <a class="dropdown-item" href="#">Cliente</a>
                                     <a class="dropdown-item" href="#">Fornecedor</a>
-                                    <a class="dropdown-item" href="#">Usuario</a>
+                                    <a class="dropdown-item" href="consulta/usuario.php">Usuario</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -37,8 +37,8 @@ require 'config.php';
                                     Cadastro
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Carro</a>
-                                    <a class="dropdown-item" href="#">Cliente</a>
+                                    <a class="dropdown-item" href="cadastro/carro.php">Carro</a>
+                                    <a class="dropdown-item" href="cadastro/cliente.php">Cliente</a>
                                     <a class="dropdown-item" href="cadastro/fornecedor.php">Fornecedor</a>
                                     <a class="dropdown-item" href="cadastro/usuario.php">Usuario</a>
                                 </div>

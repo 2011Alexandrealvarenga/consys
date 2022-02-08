@@ -7,7 +7,8 @@
                 Razao social: <br>
                 <input type="text" name="razao_social"><br>
                 CNPJ: <br>
-                <input type="number" name='cnpj'><br>
+                <input type="number" name='cnpj'><br><br>
+                Enredeço: <br><br>
                 rua: <br>
                 <input type="text" name="rua"><br>
                 bairro: <br>
