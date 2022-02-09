@@ -26,7 +26,7 @@ require 'config.php';
                                     Consulta
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Carro</a>
+                                    <a class="dropdown-item" href="consulta/carro.php">Carro</a>
                                     <a class="dropdown-item" href="consulta/cliente.php">Cliente</a>
                                     <a class="dropdown-item" href="consulta/fornecedor.php">Fornecedor</a>
                                     <a class="dropdown-item" href="consulta/usuario.php">Usuario</a>
