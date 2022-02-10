@@ -1,5 +1,5 @@
 <?php 
-require ("../header.php");
+require 'header.php'; 
 
 $lista = [];
 $sql = $pdo->query("SELECT * FROM cliente");
@@ -45,3 +45,6 @@ if($sql->rowCount() > 0){
         </div>
     </div>
 </section>
+
+
+<?php require 'footer.php'; ?>

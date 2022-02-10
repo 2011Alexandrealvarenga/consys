@@ -33,11 +33,11 @@ if($cpf){
         header('location: ../index.php');
 
     }else{
-        header('location: cliente.php');
+        header('location: cadastro_cliente.php');
     }
 
 }else{
-        header('location: cliente.php');
+        header('location: cadastro_cliente.php');
         exit;
     }
 ?>

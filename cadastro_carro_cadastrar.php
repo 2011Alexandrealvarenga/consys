@@ -1,5 +1,5 @@
 <?php 
-require ('../config.php');
+require ('config.php');
 // $id = filter_input(INPUT_POST, 'id');
 $marca= filter_input(INPUT_POST, 'marca');
 $modelo= filter_input(INPUT_POST, 'modelo');
@@ -31,10 +31,10 @@ if($modelo && $marca && $km){
 
         header('location: ../index.php');        
     }else{
-        header('carro.php');        
+        header('cadastro_carro.php');        
     }
 }
     else{
-        header('carro.php');
+        header('cadastro_carro.php');
         exit;
 }

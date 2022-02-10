@@ -1,4 +1,4 @@
-<?php require '../header.php'; 
+<?php require 'header.php'; 
 $lista = [];
 $sql =$pdo->query("SELECT * FROM usuario");
 
@@ -25,10 +25,13 @@ if($sql->rowCount() > 0){
                         <td><?php echo $usuario['nome']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td> <?php echo $usuario['login']; ?> </td>
+                        <td>
+                            <a href="editar_usuario.php?id=<?php echo $usuario['id'];?>">[Editar]</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </table>
         </div>
     </div>
 </div>
-<?php require '../footer.php'; ?>
+<?php require 'footer.php'; ?>

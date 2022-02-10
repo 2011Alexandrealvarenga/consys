@@ -25,9 +25,9 @@ if($cnpj){
         header('location: ../index.php');
         exit;
     }else{
-        header('location: fornecedor.php');
+        header('location: cadastro_fornecedor.php');
     }
 }else{
-        header('location: fornecedor.php');
+        header('location: cadastro_fornecedor.php');
     }
 ?>

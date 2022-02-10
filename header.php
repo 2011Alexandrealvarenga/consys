@@ -26,10 +26,10 @@ require 'config.php';
                                     Consulta
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="consulta/carro.php">Carro</a>
-                                    <a class="dropdown-item" href="consulta/cliente.php">Cliente</a>
-                                    <a class="dropdown-item" href="consulta/fornecedor.php">Fornecedor</a>
-                                    <a class="dropdown-item" href="consulta/usuario.php">Usuario</a>
+                                    <a class="dropdown-item" href="consulta_carro.php">Carro</a>
+                                    <a class="dropdown-item" href="consulta_cliente.php">Cliente</a>
+                                    <a class="dropdown-item" href="consulta_fornecedor.php">Fornecedor</a>
+                                    <a class="dropdown-item" href="consulta_usuario.php">Usuario</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -37,10 +37,10 @@ require 'config.php';
                                     Cadastro
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="cadastro/carro.php">Carro</a>
-                                    <a class="dropdown-item" href="cadastro/cliente.php">Cliente</a>
-                                    <a class="dropdown-item" href="cadastro/fornecedor.php">Fornecedor</a>
-                                    <a class="dropdown-item" href="cadastro/usuario.php">Usuario</a>
+                                    <a class="dropdown-item" href="cadastro_carro.php">Carro</a>
+                                    <a class="dropdown-item" href="cadastro_cliente.php">Cliente</a>
+                                    <a class="dropdown-item" href="cadastro_fornecedor.php">Fornecedor</a>
+                                    <a class="dropdown-item" href="cadastro_usuario.php">Usuario</a>
                                 </div>
                             </li>
                         </ul>

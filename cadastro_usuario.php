@@ -1,9 +1,9 @@
-<?php require '../header.php'; ?>
+<?php require 'header.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col-12">
             <h1>Adicionar usuario</h1>
-            <form method="POST" action="usuario_adicionar.php">
+            <form method="POST" action="cadastro_usuario_adicionar.php">
                 nome: <br>
                 <input type="text" name="nome"><br>
                 email: <br>
@@ -18,4 +18,4 @@
         </div>
     </div>
 </div>
-<?php require '../footer.php'; ?>
+<?php require 'footer.php'; ?>

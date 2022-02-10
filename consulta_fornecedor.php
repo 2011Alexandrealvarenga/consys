@@ -1,4 +1,4 @@
-<?php require '../header.php'; 
+<?php require 'header.php'; 
 
 $lista = [];
 $sql = $pdo->query("SELECT * FROM fornecedor");
@@ -35,4 +35,4 @@ if($sql->rowCount() > 0){
         </div>
     </div>
 </div>
-<?php require '../footer.php'; ?>
+<?php require 'footer.php'; ?>
