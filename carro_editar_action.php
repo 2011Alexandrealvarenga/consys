@@ -11,7 +11,7 @@ $cor = filter_input(INPUT_POST, 'cor');
 $valor = filter_input(INPUT_POST, 'valor');
 $quantidade = filter_input(INPUT_POST, 'quantidade');
 
-if($modelo && $marca){
+if($id && $modelo && $marca){
     $sql = $pdo->prepare('UPDATE carro SET modelo=:modelo, marca=:marca, ano=:ano, km=:km, cambio=:cambio, combustivel=:combustivel, cor=:cor, valor=:valor, quantidade=:quantidade WHERE id=:id');
     $sql->bindValue(':id', $id);
     $sql->bindValue(':modelo', $modelo);
