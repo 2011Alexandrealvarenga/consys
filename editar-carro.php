@@ -23,6 +23,7 @@ if($id){
         <div class="row">
             <div class="col-12">
                 <form method='POST' action="carro_editar_action.php">
+                    <input type="hidden" name="<?php echo $info['id']; ?>">
                     <h1>CARRO</h1>
                     <br>
                     Modelo <br>
