@@ -40,7 +40,8 @@ if($sql->rowCount() > 0){
                             <td><?php echo $usuario['cidade']; ?></td>
                             <td><?php echo $usuario['estado']; ?></td>
                             <td>
-                                <a href="editar_cliente.php?id=<?php echo $usuario['id']; ?>">[ Editar] </a>                         
+                                <a href="editar_cliente.php?id=<?php echo $usuario['id']; ?>">[ Editar]</a>     
+                                <a href="excluir_cliente.php?id=<?php echo $usuario['id'];?>">[Excluir]</a>                    
                             </td>
                         </tr>
                         <?php endforeach; ?>

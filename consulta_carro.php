@@ -38,7 +38,7 @@ if($sql->rowCount() > 0){
                             <td><?php echo $usuario['quantidade']; ?></td>
                             <td>
                                 <a href="editar-carro.php?id=<?php echo $usuario['id']; ?>">[ Editar] </a>    
-                                <a href="excluir.php?id=<?php echo $usuario['id']; ?>" onclick="return confirm('Tem certesa que deseja excluir?')";>[Excluir]</a>                     
+                                <a href="excluir_carro.php?id=<?php echo $usuario['id']; ?>" onclick="return confirm('Tem certesa que deseja excluir?')";>[Excluir]</a>                     
 
                             </td>
                         </tr>
