@@ -29,6 +29,9 @@ if($sql->rowCount() > 0){
                         <td><?php echo $usuario['bairro']; ?></td>
                         <td><?php echo $usuario['cidade']; ?></td>
                         <td><?php echo $usuario['estado']; ?></td>
+                        <td>
+                            <a href="editar_fornecedor.php?id=<?php echo $usuario['id']; ?>">[Editar]</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>    
             </table>

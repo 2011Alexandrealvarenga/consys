@@ -24,6 +24,7 @@ if($sql->rowCount() > 0){
                         <th>BAIRRO</th>
                         <th>CIDADE</th>
                         <th>ESTADO</th>
+                        <th>AÇÃO</th>
                     </tr>
                         <?php foreach($lista as $usuario): ?>
                         <tr>
@@ -38,6 +39,9 @@ if($sql->rowCount() > 0){
                             <td><?php echo $usuario['bairro']; ?></td>
                             <td><?php echo $usuario['cidade']; ?></td>
                             <td><?php echo $usuario['estado']; ?></td>
+                            <td>
+                                <a href="editar_cliente.php?id=<?php echo $usuario['id']; ?>">[ Editar] </a>                         
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                 </table>
