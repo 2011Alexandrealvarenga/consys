@@ -27,6 +27,7 @@ if($sql->rowCount() > 0){
                         <td> <?php echo $usuario['login']; ?> </td>
                         <td>
                             <a href="editar_usuario.php?id=<?php echo $usuario['id'];?>">[Editar]</a>
+                            <a href="excluir_usuario.php?id=<?php echo $usuario['id']; ?>">[Excluir]</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

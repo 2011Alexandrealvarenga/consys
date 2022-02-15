@@ -31,6 +31,7 @@ if($sql->rowCount() > 0){
                         <td><?php echo $usuario['estado']; ?></td>
                         <td>
                             <a href="editar_fornecedor.php?id=<?php echo $usuario['id']; ?>">[Editar]</a>
+                            <a href="excluir_fornecedor.php?id=<?php echo $usuario['id']; ?>">[Excluir]</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>    
