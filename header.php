@@ -1,52 +1,25 @@
-<?php 
-require 'config.php';
-?>
+<?php require 'classes/config.php';?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Consys - Concessionária</title>
+    <title>ConSys - Concessionária</title>
+    <!-- <link href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Consulta
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="consulta_carro.php">Carro</a>
-                                    <a class="dropdown-item" href="consulta_cliente.php">Cliente</a>
-                                    <a class="dropdown-item" href="consulta_fornecedor.php">Fornecedor</a>
-                                    <a class="dropdown-item" href="consulta_usuario.php">Usuario</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Cadastro
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="cadastro_carro.php">Carro</a>
-                                    <a class="dropdown-item" href="cadastro_cliente.php">Cliente</a>
-                                    <a class="dropdown-item" href="cadastro_fornecedor.php">Fornecedor</a>
-                                    <a class="dropdown-item" href="cadastro_usuario.php">Usuario</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Consys</h1>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+    
+<?php require 'menu.php';?>
