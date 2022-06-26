@@ -1,10 +1,5 @@
 <?php require 'header.php';
-
-$lista = [];
-$sql = $conexao->query('SELECT * from carro');
-if($sql->rowCount() > 0){
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
+$lista = carro($conexao);
 ?>
 <section class="carro">
     <div class="container">

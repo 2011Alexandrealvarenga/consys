@@ -1,4 +1,4 @@
-<?php require 'header.php'?>
+<?php require '../../header.php'?>
 <section class="addcarro">
     <div class="container">
         <div class="row">
@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="adicionar_carro_action.php" method="post"><br>
+                <form action="adicionar_action.php" method="post"><br>
                     <label for="">
                         Marca: <br>
                         <input type="text" name="marca"><br>
@@ -23,4 +23,4 @@
         </div>
     </div>
 </section>
-<?php require 'footer.php'?>
+<?php require '../../footer.php'?>
