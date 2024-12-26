@@ -7,7 +7,8 @@
     <title>ConSys - Concessionária</title>
     <!-- <link href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
     <header>
@@ -19,35 +20,36 @@
             </div>
         </div>
     </header>
-    <section class="">
+    <section class="lista-carro">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    Bem Vindo a ConSys
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="subtitle">Veja a lista de Carros</h2>
-                </div>
-                <div class="col-12">
-                    <div class="content">
+            <div class="row">                
+                <div class="col-4 my-4">
+                    <div class="content-item-carro">
                         <div class="item">
-                            <img src="" alt="">
+                            <img src="assets/img/fit.jpg" class="img-carro">
+                            <ul>
+                                <li><b>Marca:</b> Honda</li>
+                                <li><b>Modelo:</b> Fit</li>
+                                <li><b>Ano fabricação:</b> 2007</li>
+                                <li><b>Ano Modelo:</b> 2008</li>
+                                <li><b>Quilometragem:</b> km 125.000</li>
+                                <li><b>Cor:</b> Verde</li>
+                                <li><b>R$ 30.000</b></li>
+                            </ul>
+                            <a href="carro.php">
+                                <div class="btn-verificar">Verificar</div>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </div> 
+                          
+                    
+
             </div>
         </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                </div>
-            </div>
-        </div>
+        
     </footer>
 </body>
 </html>
