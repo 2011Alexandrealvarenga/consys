@@ -1,7 +1,25 @@
-<?php require 'header.php'; 
-$lista = carro($conexao);
-?>
-    <section>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConSys - Concessionária</title>
+    <!-- <link href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Consys</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -10,25 +28,26 @@ $lista = carro($conexao);
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h2>Veja a lista de Carros</h2>
+                    <h2 class="subtitle">Veja a lista de Carros</h2>
                 </div>
                 <div class="col-12">
-                    <table border="1" width="100%">
-                        <tr>
-                            <th>ID</th>
-                            <th>CARRO</th>
-                            <th>COR</th>
-                        </tr>
-                        <?php foreach ($lista as $carros):?>
-                        <tr>
-                            <td><?php echo $carros['id']?></td>
-                            <td><?php echo $carros['marca']?></td>
-                            <td><?php echo $carros['cor']?></td>
-                        </tr>
-                        <?php endforeach;?>
-                    </table>
+                    <div class="content">
+                        <div class="item">
+                            <img src="" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-<?php require 'footer.php';?>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
