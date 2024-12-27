@@ -1,0 +1,10 @@
+.pagamento{
+  background: #f2f2f2;
+}
+.pagamento .content-carro {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pagamento .content-esquerdo .item{
+  margin: 0 0 8px 0;  
+}
