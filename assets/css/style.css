@@ -9,3 +9,12 @@ h2{font-size: 26px;}
   text-align: center;
   cursor: pointer;
 }
+header{
+  padding: 0 0 60px 0;
+  background: #f2f2f2;
+}
+footer{
+  padding: 0 0 60px 0;
+  background: #f2f2f2;
+
+}

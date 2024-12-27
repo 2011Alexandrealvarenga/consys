@@ -1,0 +1,45 @@
+.pagina-carro .content-img{
+
+  display: flex;
+  justify-content: center;
+}
+.pagina-carro .content-img .destaque{
+  width: 500px;
+}
+.pagina-carro .content-desc{
+  padding: 12px;
+  background: #f2f2f2;
+  border: 1px solid black;
+  height: 200px;
+}
+.pagina-carro .content-desc .item{
+  display: grid;
+  margin: 0 24px 16px 0;
+}
+.pagina-carro .content-desc .dados{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pagina-carro .content-desc  .dados .item .carac{
+  font-size: 12px;
+}
+.pagina-carro .content-desc  .dados .item .carac-item{
+  font-weight: bold;
+  font-size: 16px;
+}
+.pagina-carro .content-desc .item-valor{
+  /* width: 40%; */
+  /* left: 0; */
+  right: 20px;
+  bottom: 0;
+  position: absolute;
+  float: right;
+  margin: 8px;
+}
+.pagina-carro .content-desc .item-valor .carac{
+  font-size: 12px;
+}
+.pagina-carro .content-desc .item-valor .carac-item{
+  font-weight: bold;
+  font-size: 32px;
+}
