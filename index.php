@@ -45,17 +45,7 @@
             </div>
         </div>
     </section>
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quisquam dolorem eaque iusto assumenda, asperiores eum dolor cumque, sequi consectetur sit! Obcaecati molestiae blanditiis harum autem dolores ipsa ea rerum.</span>
-    <button class="botao">clique aqui</button>
     <footer>
-        <script>
-            const botao = document.querySelector('.botao');
-            const corpo = document.querySelector('span');
-            botao.addEventListener('click', function(){
-                corpo.style.color = 'yellow';
-
-            })
-        </script>
     </footer>
 </body>
 </html>
