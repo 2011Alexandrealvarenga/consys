@@ -94,7 +94,7 @@
               </div>
               <div class="btn-verificar float-left color-white"  onclick="somarValoresV2()">Calcular</div>
               <div class="btn-verificar">
-                <a href="pagamento.php">Comprar</a>
+                <a href="dados-pagamento.php">Comprar</a>
               </div>
             </div>
           </div>
