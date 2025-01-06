@@ -55,8 +55,6 @@
                 <input type="text" id='juros'><br>
                 <span class="carac-item">Qtde. de parcelas</span>
                 <div class="radiobtn">
-                  <span id="vlCarroMenosEntrada"></span>
-                  <br>
                   <div class="btn-verificar" onclick="somarValoresV2()">Calcular</div>
                   <div class="">
                     <input type="radio" id="10" name="multiplicador" value="10">
