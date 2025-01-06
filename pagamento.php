@@ -36,9 +36,9 @@
               </div>
               <div class="item-carro">
                 <span class="carac">valor</span>
-                <!-- <span class="carac-item" id='valor-carro'>R$ 30.000,00</span> -->
-                <!-- <input type="text" id="valor-carro"  value="30"> -->
-                <span id="valor-carro">1000</span>
+                <div class="d-flex carac-item">
+                  <span>R$ </span><span id="valor-carro">1000</span>
+                </div>
               </div>
             </div>
           </div>
@@ -47,17 +47,15 @@
             <div class="content-esquerdo">
               <div class="item">
                 <span class="carac-item">Valor de entrada</span><br>
-                <input type="text" class="input-valor" id='valor-entrada'>
-                <!-- <input type="text" class="input-valor" id='valor-entrada' MAXLENGTH="13" onKeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)"> -->
+                <input type="text" class="input-valor" id='valor-entrada' value="100">
               </div>
               <div class="item">
                 <span>juros</span><br>
-                <input type="text" id='juros'><br>
+                <input type="text" id='juros' value="10"><br>
                 <span class="carac-item">Qtde. de parcelas</span>
-                <div class="radiobtn">
-                  <div class="btn-verificar" onclick="somarValoresV2()">Calcular</div>
+                <div class="radiobtn">                  
                   <div class="">
-                    <input type="radio" id="10" name="multiplicador" value="10">
+                    <input type="radio" id="10" name="multiplicador" checked value="10">
                     <label for="10">10x</label><br>
                     <input type="radio" id="16" name="multiplicador" value="16">
                     <label for="16">16x</label><br>
@@ -72,7 +70,11 @@
           </div>
           <div class="col-6">
             <div class="content-direito">
-              direito
+              <div class="item">
+                <span class="carac-item">Valor de entrada</span><br>
+                <input type="radio" id="avista" name="multiplicador" value="avista">
+                <label for="avista" class="carac-item">R$ 30.000,00</label><br>
+              </div>
             </div>
           </div>
           <hr class="line">
@@ -90,6 +92,7 @@
                 <span class="carac">Valor de entrada mais parcelado</span>
                 <span class="carac-item" id='vlTotalEntMaisParc'></span>
               </div>
+              <div class="btn-verificar float-left color-white"  onclick="somarValoresV2()">Calcular</div>
               <div class="btn-verificar">
                 <a href="pagamento.php">Comprar</a>
               </div>
