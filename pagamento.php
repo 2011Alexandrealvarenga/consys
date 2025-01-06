@@ -38,7 +38,7 @@
                 <span class="carac">valor</span>
                 <!-- <span class="carac-item" id='valor-carro'>R$ 30.000,00</span> -->
                 <!-- <input type="text" id="valor-carro"  value="30"> -->
-                <span id="valor-carro">30.000,00</span>
+                <span id="valor-carro">1000</span>
               </div>
             </div>
           </div>
@@ -47,17 +47,20 @@
             <div class="content-esquerdo">
               <div class="item">
                 <span class="carac-item">Valor de entrada</span><br>
-                <input type="text" class="input-valor" id='valor-entrada' MAXLENGTH="13" onKeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)">
+                <input type="text" class="input-valor" id='valor-entrada'>
+                <!-- <input type="text" class="input-valor" id='valor-entrada' MAXLENGTH="13" onKeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)"> -->
               </div>
               <div class="item">
+                <span>juros</span><br>
+                <input type="text" id='juros'><br>
                 <span class="carac-item">Qtde. de parcelas</span>
                 <div class="radiobtn">
                   <span id="vlCarroMenosEntrada"></span>
                   <br>
-                  <div class="btn-verificar" onclick="somarValores()">Calcular</div>
+                  <div class="btn-verificar" onclick="somarValoresV2()">Calcular</div>
                   <div class="">
-                    <input type="radio" id="8" name="multiplicador" value="8">
-                    <label for="8">8x</label><br>
+                    <input type="radio" id="10" name="multiplicador" value="10">
+                    <label for="10">10x</label><br>
                     <input type="radio" id="16" name="multiplicador" value="16">
                     <label for="16">16x</label><br>
                     <input type="radio" id="32" name="multiplicador" value="32">
@@ -78,8 +81,16 @@
           <div class="col-12">
             <div class="vl-total-financiado">
               <div class="item-carro">
-                <span class="carac">Valor total financiado</span>
-                <span class="carac-item" id='vlTotalFinanciado'>R$ </span>
+                <span class="carac">Valor de cada parcela</span>
+                <span class="carac-item" id='vlCadaParcela'></span>
+              </div>
+              <div class="item-carro">
+                <span class="carac">Valor total parcelado</span>
+                <span class="carac-item" id='vlTotalFinanciado'></span>
+              </div>
+              <div class="item-carro">
+                <span class="carac">Valor de entrada mais parcelado</span>
+                <span class="carac-item" id='vlTotalEntMaisParc'></span>
               </div>
               <div class="btn-verificar">
                 <a href="pagamento.php">Comprar</a>
