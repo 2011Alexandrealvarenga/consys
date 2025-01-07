@@ -96,7 +96,7 @@
           </div>    
           <div class="col-12">
             <div class="btn-verificar">
-              <a href="">Comprar</a>
+              <a href="relatorio-final.php">Comprar</a>
             </div>      
           </div>
         </div>
