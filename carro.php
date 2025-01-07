@@ -37,6 +37,10 @@
                     <div class="content-desc">
                         <div class="dados">
                             <div class="item-carro">
+                                <span class="carac">Marca</span>
+                                <span class="carac-item">Honda</span>
+                            </div>
+                            <div class="item-carro">
                                 <span class="carac">Modelo</span>
                                 <span class="carac-item">Fit</span>
                             </div>

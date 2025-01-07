@@ -72,7 +72,7 @@
           </div>
           <hr class="line">
           <div class="col-12">
-            <h3 class="subtitle">Dados Pessoais</h2>
+            <h3 class="subtitle">Dados pagamento</h2>
           </div>
           <div class="col-6">
             <div class="content">
