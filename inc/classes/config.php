@@ -1,19 +1,28 @@
 <?php
+function conectarBanco() {
+    $host = "localhost";       
+    $usuario = "root";         
+    $senha = "";               
+    $banco = "consys_db";  
 
-try{
-    $conexao = new PDO('mysql:dbname=bd_con_sys;host=localhost','root','');
+    $conexao = new mysqli($host, $usuario, $senha, $banco);
 
-}catch(PDOException $e) {
-    echo 'ERRO:'.$e->getMessage();
+    if ($conexao->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+    }
+
+    return $conexao;
 }
 
-define('ROTA', 'http://localhost:8080/PHP/projetos/consys/');
 
-function carro($conexao){
-    $sql = $conexao->query('SELECT * from carro');
-    if($sql->rowCount() > 0){
-        $lista = $sql->fetchAll();
-        return $lista;
+function consultarCarros($conexao) {
+    $sql = "SELECT * FROM carro"; 
+    $resultado = $conexao->query($sql);
+
+    if ($resultado->num_rows > 0) {
+        return $resultado;
+    } else {
+        return null; 
     }
 }
 

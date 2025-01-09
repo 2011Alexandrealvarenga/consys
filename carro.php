@@ -1,3 +1,20 @@
+<!-- pagina2.php -->
+<?php
+// Verifique se há um ID de produto na URL
+if (isset($_GET['id'])) {
+    $idCarro = $_GET['id'];
+    $marca = $_GET['marca'];
+    $modelo = $_GET['modelo'];
+    $ano_fabricacao = $_GET['ano_fabricacao'];
+    $ano_modelo = $_GET['ano_modelo'];
+    $quilometragem = $_GET['quilometragem'];
+    $cor = $_GET['cor'];
+    $placa_final = $_GET['placa_final'];
+    $valor = $_GET['valor'];
+    $cambio = $_GET['cambio'];
+
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,28 +50,30 @@
                         <img src="assets/img/fit.jpg" class="destaque" alt="">
                     </div>
                 </div>
+                <p><?php echo $idProduto;?></p>
                 <div class="col-12">
                     <div class="content-desc">
                         <div class="dados">
+                            
                             <div class="item-carro">
                                 <span class="carac">Marca</span>
-                                <span class="carac-item">Honda</span>
+                                <span class="carac-item"><?php echo $marca;?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Modelo</span>
-                                <span class="carac-item">Fit</span>
+                                <span class="carac-item"><?php echo $modelo;?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Ano Fábricação</span>
-                                <span class="carac-item">2007</span>
+                                <span class="carac-item"><?php echo $ano_fabricacao;?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Ano Modelo</span>
-                                <span class="carac-item">2008</span>
+                                <span class="carac-item"><?php echo $ano_modelo;?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Cor</span>
-                                <span class="carac-item">Verde</span>
+                                <span class="carac-item"><?php echo $cor;?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Câmbio</span>

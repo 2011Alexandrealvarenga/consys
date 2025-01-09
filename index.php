@@ -1,15 +1,11 @@
 <?php 
-$pdo = new PDO('mysql:dbname=consys_db;host=localhost','root','');
+include('inc/classes/config.php');
+$conexao = conectarBanco();
 
-$sql = $pdo->query('SELECT * FROM carro');
+$dados_carro = consultarCarros($conexao);
 
-echo 'total: '.$sql->rowCount();
+$conexao->close();
 
-$dados = $sql->fetchALL(PDO::FETCH_ASSOC);
-
-
-echo '<pre>';
-print_r($dados);
 ;?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,30 +32,30 @@ print_r($dados);
     <section class="lista-carro">
         <div class="container">
             <div class="row">   
-                <?php foreach($dados as $car) {
-                    ?>
+                <?php foreach($dados_carro as $car) {;?>
                     <div class="col-4 my-4">
                         <div class="content-item-carro">
                             <div class="item">
                                 <img src="assets/img/<?php echo $car['imagem'] ;?>" class="img-carro">
-                                <ul>
-                                    <li><b>id:</b> <?php echo $car['id'] ;?></li>
-                                    <li><b>Marca:</b> <?php echo $car['marca'] ;?></li>
-                                    <li><b>Modelo:</b> <?php echo $car['modelo'] ;?></li>
-                                    <li><b>Ano fabricação:</b> <?php echo $car['ano_fabricacao'] ;?></li>
-                                    <li><b>Ano Modelo:</b> <?php echo $car['ano_modelo'] ;?></li>
-                                    <li><b>Quilometragem:</b> Km:<?php echo $car['quilometragem'] ;?></li>
-                                    <li><b>Cor:</b> <?php echo $car['cor'] ;?></li>
-                                    <li><b>Placa Final:</b> <?php echo $car['placa_final'] ;?></li>
-                                    <li><b>R$ <?php echo $car['valor'] ;?></b></li>
-                                </ul>
+                                <div class="lista">
+                                    <p><b>id:</b> <?php echo $car['id'] ;?></p>
+                                    <p><b>Marca:</b> <?php echo $car['marca'] ;?></p>
+                                    <p><b>Modelo:</b> <?php echo $car['modelo'] ;?></p>
+                                    <p><b>Ano fabricação:</b> <?php echo $car['ano_fabricacao'] ;?></p>
+                                    <p><b>Ano Modelo:</b> <?php echo $car['ano_modelo'] ;?></p>
+                                    <p><b>Quilometragem:</b> Km:<?php echo $car['quilometragem'] ;?></p>
+                                    <p><b>Cor:</b> <?php echo $car['cor'] ;?></p>
+                                    <p><b>Placa Final:</b> <?php echo $car['placa_final'] ;?></p>
+                                    <p><b>Câmbio:</b> <?php echo $car['cambio'] ;?></p>
+                                    <p><b>R$ <?php echo $car['valor'] ;?></b></p>
+                                </div>
                                 <div class="btn-verificar">
-                                    <a href="carro.php">Verificar</a>
+                                    <a href="carro.php?id=<?php echo $car['id'] ;?>">Verificar</a>
                                 </div>
                             </div>
                         </div>
                     </div>                     
-                <?php };?>             
+                <?php };?>                    
             </div>
         </div>
     </section>
