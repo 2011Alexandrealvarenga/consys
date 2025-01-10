@@ -1,19 +1,46 @@
 <!-- pagina2.php -->
 <?php
-// Verifique se há um ID de produto na URL
-if (isset($_GET['id'])) {
-    $idCarro = $_GET['id'];
-    $marca = $_GET['marca'];
-    $modelo = $_GET['modelo'];
-    $ano_fabricacao = $_GET['ano_fabricacao'];
-    $ano_modelo = $_GET['ano_modelo'];
-    $quilometragem = $_GET['quilometragem'];
-    $cor = $_GET['cor'];
-    $placa_final = $_GET['placa_final'];
-    $valor = $_GET['valor'];
-    $cambio = $_GET['cambio'];
+include('inc/classes/config.php');
+$conexao = conectarBanco();
 
+// $info = [];
+// $id = isset($_GET['id']);
+if ($conexao->connect_error) {
+    die("Conexão falhou: " . $conexao->connect_error);
 }
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM carro WHERE id = $id";
+    $result = $conexao->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Exibe os detalhes do item
+        $carro = $result->fetch_assoc();
+        
+    } else {
+        echo "Item não encontrado.";
+    }
+}else{
+    echo 'não foi passado id';
+}
+
+
+// Verifique se há um ID de produto na URL
+// if (isset($_GET['id'])) {
+//     $idCarro = $_GET['id'];
+//     $marca = $_GET['marca'];
+//     $modelo = $_GET['modelo'];
+//     $ano_fabricacao = $_GET['ano_fabricacao'];
+//     $ano_modelo = $_GET['ano_modelo'];
+//     $quilometragem = $_GET['quilometragem'];
+//     $cor = $_GET['cor'];
+//     $placa_final = $_GET['placa_final'];
+//     $valor = $_GET['valor'];
+//     $cambio = $_GET['cambio'];
+
+// }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,58 +66,52 @@ if (isset($_GET['id'])) {
     </header>
     <section class="pagina-carro">
         <div class="container">
-            <div class="row">                
-                <div class="col-12 my-4">
-                    pagina carro
-                </div> 
-            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="content-img">
-                        <img src="assets/img/fit.jpg" class="destaque" alt="">
+                        <img src="assets/img/<?php echo $carro['imagem'];?>" class="destaque" alt="">
                     </div>
                 </div>
-                <p><?php echo $idProduto;?></p>
                 <div class="col-12">
                     <div class="content-desc">
                         <div class="dados">
                             
                             <div class="item-carro">
                                 <span class="carac">Marca</span>
-                                <span class="carac-item"><?php echo $marca;?></span>
+                                <span class="carac-item"><?php echo $carro['marca'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Modelo</span>
-                                <span class="carac-item"><?php echo $modelo;?></span>
+                                <span class="carac-item"><?php echo $carro['modelo'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Ano Fábricação</span>
-                                <span class="carac-item"><?php echo $ano_fabricacao;?></span>
+                                <span class="carac-item"><?php echo $carro['ano_fabricacao'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Ano Modelo</span>
-                                <span class="carac-item"><?php echo $ano_modelo;?></span>
+                                <span class="carac-item"><?php echo $carro['ano_modelo'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Cor</span>
-                                <span class="carac-item"><?php echo $cor;?></span>
+                                <span class="carac-item"><?php echo $carro['cor'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Câmbio</span>
-                                <span class="carac-item">Automático</span>
+                                <span class="carac-item"><?php echo $carro['cambio'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Placa final</span>
-                                <span class="carac-item">5</span>
+                                <span class="carac-item"><?php echo $carro['placa_final'];?></span>
                             </div>
                             <div class="item-carro">
                                 <span class="carac">Quilometragem</span>
-                                <span class="carac-item">125.000</span>
+                                <span class="carac-item"><?php echo $carro['quilometragem'];?></span>
                             </div>
                         </div>
                         <div class="item-valor">
                             <span class="carac">Valor</span><br>
-                            <span class="carac-item">R$ 25.000,00</span><br>
+                            <span class="carac-item">R$</span><span class="carac-item"><?php echo $carro['valor'];?></span><br>
                             <div class="btn-verificar">
                                 <a href="pagamento.php">Comprar</a>
                             </div>
