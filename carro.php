@@ -75,7 +75,7 @@ if(isset($_GET['id'])) {
                 <div class="col-12">
                     <div class="content-desc">
                         <div class="dados">
-                            
+                            <div class="hidden d-none"><?php $carro['id'] ;?></div>
                             <div class="item-carro">
                                 <span class="carac">Marca</span>
                                 <span class="carac-item"><?php echo $carro['marca'];?></span>
@@ -113,7 +113,7 @@ if(isset($_GET['id'])) {
                             <span class="carac">Valor</span><br>
                             <span class="carac-item">R$</span><span class="carac-item"><?php echo $carro['valor'];?></span><br>
                             <div class="btn-verificar">
-                                <a href="pagamento.php">Comprar</a>
+                                <a href="pagamento.php?id=<?php echo $carro['id'] ;?>">Comprar</a>
                             </div>
                         </div>
                     </div>
