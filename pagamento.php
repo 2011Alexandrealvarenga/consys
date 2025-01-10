@@ -1,3 +1,29 @@
+<?php
+include('inc/classes/config.php');
+$conexao = conectarBanco();
+
+if ($conexao->connect_error) {
+    die("Conexão falhou: " . $conexao->connect_error);
+}
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM carro WHERE id = $id";
+    $result = $conexao->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Exibe os detalhes do item
+        $carro = $result->fetch_assoc();
+        
+    } else {
+        echo "Item não encontrado.";
+    }
+}else{
+    echo 'não foi passado id';
+}
+
+;?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -26,18 +52,21 @@
           <div class="col-12">
             <h2 class="subtitle">Forma de pagamento</h2>
           </div>
+        <form action="dados-pagamento.php" method="post">
           <hr class="line">
           <div class="col-12">
             <h3 class="subtitle2">Dados do Carro</h3>
+            <input type="hidden" name="id" value="<?php echo $carro['id']  ;?>">
+          
             <div class="content-carro">
               <div class="item-carro">
                 <span class="carac">Modelo</span>
-                <span class="carac-item">Fit</span>
+                <span class="carac-item" ><?php echo $carro['modelo'] ;?></span>
               </div>
               <div class="item-carro">
                 <span class="carac">valor</span>
                 <div class="d-flex carac-item">
-                  <span>R$ </span><span id="valor-carro">1000</span>
+                  <span>R$ </span><span id="valor-carro"><?php echo $carro['valor'] ;?></span>
                 </div>
               </div>
             </div>
@@ -47,7 +76,7 @@
             <div class="content-esquerdo">
               <div class="item">
                 <span class="carac-item">Valor de entrada</span><br>
-                <input type="text" class="input-valor" id='valor-entrada' value="100">
+                <input type="text" class="input-valor" id='valor-entrada' name="vlEntrada">
               </div>
               <div class="item">
                 <span>juros</span><br>
@@ -71,9 +100,9 @@
           <div class="col-6">
             <div class="content-direito">
               <div class="item">
-                <span class="carac-item">Valor de entrada</span><br>
-                <input type="radio" id="avista" name="multiplicador" value="avista">
-                <label for="avista" class="carac-item">R$ 30.000,00</label><br>
+                <span class="carac-item">Valor a vista</span><br>
+                <input type="radio" id="avista" name="valoraVista" value='<?php echo $carro['valor'] ;?>'>
+                <label for="avista" class="carac-item" name='avista'>R$ <?php echo $carro['valor'] ;?></label><br>
               </div>
             </div>
           </div>
@@ -82,22 +111,23 @@
             <div class="vl-total-financiado">
               <div class="item-carro">
                 <span class="carac">Valor de cada parcela</span>
-                <span class="carac-item" id='vlCadaParcela'></span>
+                <span class="carac-item" id='vlCadaParcela' name='vlCadaParcela'></span>
               </div>
               <div class="item-carro">
                 <span class="carac">Valor total parcelado</span>
-                <span class="carac-item" id='vlTotalFinanciado'></span>
+                <span class="carac-item" id='vlTotalFinanciado' name='vlTotalFinanciado'></span>
               </div>
               <div class="item-carro">
                 <span class="carac">Valor de entrada mais parcelado</span>
-                <span class="carac-item" id='vlTotalEntMaisParc'></span>
+                <span class="carac-item" id='vlTotalEntMaisParc' name='vlTotalEntMaisParc'></span>
               </div>
               <div class="btn-verificar float-left color-white"  onclick="somarValoresV2()">Calcular</div>
               <div class="btn-verificar">
-                <a href="dados-pagamento.php">Comprar</a>
+                <button type="submit">Comprar</button>
               </div>
             </div>
           </div>
+        </form>
         </div>
       </div>
     </section>

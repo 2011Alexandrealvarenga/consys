@@ -1,4 +1,3 @@
-<!-- pagina2.php -->
 <?php
 include('inc/classes/config.php');
 $conexao = conectarBanco();
@@ -26,21 +25,6 @@ if(isset($_GET['id'])) {
     echo 'não foi passado id';
 }
 
-
-// Verifique se há um ID de produto na URL
-// if (isset($_GET['id'])) {
-//     $idCarro = $_GET['id'];
-//     $marca = $_GET['marca'];
-//     $modelo = $_GET['modelo'];
-//     $ano_fabricacao = $_GET['ano_fabricacao'];
-//     $ano_modelo = $_GET['ano_modelo'];
-//     $quilometragem = $_GET['quilometragem'];
-//     $cor = $_GET['cor'];
-//     $placa_final = $_GET['placa_final'];
-//     $valor = $_GET['valor'];
-//     $cambio = $_GET['cambio'];
-
-// }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,7 +33,6 @@ if(isset($_GET['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConSys - Concessionária</title>
-    <!-- <link href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/carro.css">

@@ -1,3 +1,32 @@
+<?php 
+
+if(isset($_POST['id'])){
+  $id = $_POST['id'];
+  // echo '<br>'.'id: '.$modelo = $_POST['modelo'];
+  // echo '<br>'.'valor: '.$valor = $_POST['valor'];
+  // echo '<br>'.'vlEntrada: '.$vlEntrada = $_POST['vlEntrada'];
+  // echo '<br>'.'vlCadaParcela: '.$vlCadaParcela = $_POST['vlCadaParcela'];
+  // echo '<br>'.'vlTotalFinanciado: '.$vlTotalFinanciado = $_POST['vlTotalFinanciado'];
+  // echo '<br>'.'vlTotalEntMaisParc: '.$vlTotalEntMaisParc = $_POST['vlTotalEntMaisParc'];
+  // echo '<br>'.'avista: '.$avista = $_POST['avista'];
+
+}else{
+  echo 'nao foi passado id';
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Verifica se o campo 'opcao' foi preenchido
+  if (isset($_POST['valoraVista'])) {
+      $valoraVista = $_POST['valoraVista'];
+  } else {
+      echo "Nenhuma opção foi selecionada.";
+  }
+}
+
+echo '<br>id:'.$id;
+echo '<br>Valor a vista R$: '.$valoraVista;
+
+;?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
