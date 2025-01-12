@@ -4,3 +4,13 @@
 .dados-pessoais .content .item input{
   width: 100%;
 }
+.dados-pessoais form{width: 100%;}
+
+.content-form{display: flex;}
+.content-form form{
+  width: 100%;
+  display: flex;
+}
+.col-esquerda,
+.col-direita{width: 50%;}
+.col-esquerda{    margin: 0 8px;}

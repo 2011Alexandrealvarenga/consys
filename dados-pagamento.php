@@ -59,75 +59,64 @@ echo '<br>Valor a vista R$: '.$valoraVista;
           <div class="col-12">
             <h3 class="subtitle">Dados Pessoais</h2>
           </div>
-          <div class="col-6">
-            <div class="content">
-              <div class="item">
-                <span class="bold">Nome completo</span><br>
-                <input type="text" name='nome'>
-              </div>
-              <div class="item">
-                <span class="bold">Endereço</span><br>
-                <input type="text" name='endereco'>
-              </div>
-              <div class="item">
-                <span class="bold">Número</span><br>
-                <input type="text" name='numero'>
-              </div>
-              <div class="item">
-                <span class="bold">Complemento</span><br>
-                <input type="text" name='complemento'>
-              </div>
-              <div class="item">
-                <span class="bold">Bairro</span><br>
-                <input type="text" name='bairro'>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="content">
-              <div class="item">
-                <span class="bold">CPF</span><br>
-                <input type="text" name='cpf'>
-              </div>
-              <div class="item">
-                <span class="bold">Cidade</span><br>
-                <input type="text" name='cidade'>
-              </div>
-              <div class="item">
-                <span class="bold">Bairro</span><br>
-                <input type="text" name='bairro'>
-              </div>
-            </div>
-          </div>
-          <hr class="line">
           <div class="col-12">
-            <h3 class="subtitle">Dados pagamento</h2>
-          </div>
-          <div class="col-6">
-            <div class="content">
-              <div class="item">
-                <span class="bold">Nome completo impresso no cartão</span><br>
-                <input type="text" name='nomeImpressoCartao'>
-              </div>
-              <div class="item">
-                <span class="bold">Número do cartão</span><br>
-                <input type="text" name='numeroCartao'>
-              </div>
-              <div class="item">
-                <span class="bold">Validade</span><br>
-                <input type="text" name='validade'>
-              </div>
-              <div class="item">
-                <span class="bold">Código verificador</span><br>
-                <input type="text" name='codigoVerificador'>
-              </div>
+              <form action="relatorio-final.php" method="post">  
+                <input type="hidden" name="id" value="<?php echo $id;?>">    
+                  <div class="content">
+                    <div class="item">
+                      <span class="bold">Nome completo</span><br>
+                      <input type="text" name='nome'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Endereço</span><br>
+                      <input type="text" name='endereco'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Número</span><br>
+                      <input type="text" name='numero'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Complemento</span><br>
+                      <input type="text" name='complemento'>
+                    </div>
+                  </div>
+             
+                    <div class="item">
+                      <span class="bold">CPF</span><br>
+                      <input type="text" name='cpf'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Cidade</span><br>
+                      <input type="text" name='cidade'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Bairro</span><br>
+                      <input type="text" name='bairro'>
+                    </div>
+                  <hr class="line">
+                  <h3 class="subtitle">Dados pagamento</h2>
+                    <div class="item">
+                      <span class="bold">Nome completo impresso no cartão</span><br>
+                      <input type="text" name='nomeImpressoCartao'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Número do cartão</span><br>
+                      <input type="text" name='numeroCartao'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Validade</span><br>
+                      <input type="text" name='validade'>
+                    </div>
+                    <div class="item">
+                      <span class="bold">Código verificador</span><br>
+                      <input type="text" name='codigoVerificador'>
+                    </div>
+                  <div class="btn-verificar">
+                    <button type="submit">Comprar</button>
+                  </div>      
+              </form>
             </div>
-          </div>    
-          <div class="col-12">
-            <div class="btn-verificar">
-              <a href="relatorio-final.php">Comprar</a>
-            </div>      
-          </div>
+          </div>            
         </div>
       </div>
     </section>
