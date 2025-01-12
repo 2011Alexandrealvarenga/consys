@@ -11,20 +11,24 @@ if(isset($_POST['id'])){
   // echo '<br>'.'avista: '.$avista = $_POST['avista'];
 
 }else{
-  echo 'nao foi passado id';
+  echo 'id nao enviado';
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Verifica se o campo 'opcao' foi preenchido
-  if (isset($_POST['valoraVista'])) {
-      $valoraVista = $_POST['valoraVista'];
-  } else {
-      echo "Nenhuma opção foi selecionada.";
-  }
+  if(isset($_POST['resvlCadaParcela']) ? $resvlCadaParcela = $_POST['resvlCadaParcela'] : "valor nao enviado Valor Cada Parcela" );
+  if(isset($_POST['resvlTotalFinanciado']) ? $resvlTotalFinanciado = $_POST['resvlTotalFinanciado'] : "valor nao enviado Valor Cada Parcela" );
+  if(isset($_POST['resvlTotalEntMaisParc']) ? $resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'] : "valor nao enviado Valor Cada Parcela" );
+  if(isset($_POST['resmultiplicador']) ? $resmultiplicador = $_POST['resmultiplicador'] : "qtd parcelas" );
+} else {
+  echo "<p>Nenhum dado recebido.</p>";
 }
 
-echo '<br>id:'.$id;
-echo '<br>Valor a vista R$: '.$valoraVista;
+echo '<br>id: '.$id;
+echo '<br>valor cada parcela: '.$resvlCadaParcela;
+echo '<br>valor total financiado: '.$resvlTotalFinanciado;
+echo '<br>valor total total ent mais parc: '.$resvlTotalEntMaisParc;
+echo '<br>qtd parcelas: '.$resmultiplicador;
+// echo '<br>Valor a vista R$: '.$valoraVista;
 
 ;?>
 <!DOCTYPE html>

@@ -76,7 +76,7 @@ if(isset($_GET['id'])) {
             <div class="content-esquerdo">
               <div class="item">
                 <span class="carac-item">Valor de entrada</span><br>
-                <input type="text" class="input-valor" id='valor-entrada' name="vlEntrada">
+                <input type="text" class="input-valor" id='valor-entrada' name="vlEntrada" value="100">
               </div>
               <div class="item">
                 <span>juros</span><br>
@@ -93,6 +93,7 @@ if(isset($_GET['id'])) {
                     <input type="radio" id="48" name="multiplicador" value="48">
                     <label for="48">48x</label><br>
                   </div>
+                  <input type="hidden" name="resmultiplicador" id="resmultiplicador">
                 </div>
               </div>
             </div>
@@ -112,14 +113,17 @@ if(isset($_GET['id'])) {
               <div class="item-carro">
                 <span class="carac">Valor de cada parcela</span>
                 <span class="carac-item" id='vlCadaParcela' name='vlCadaParcela'></span>
+                <input type="hidden" name="resvlCadaParcela" id="resvlCadaParcela">
               </div>
               <div class="item-carro">
                 <span class="carac">Valor total parcelado</span>
                 <span class="carac-item" id='vlTotalFinanciado' name='vlTotalFinanciado'></span>
+                <input type="hidden" name="resvlTotalFinanciado" id="resvlTotalFinanciado">
               </div>
               <div class="item-carro">
                 <span class="carac">Valor de entrada mais parcelado</span>
                 <span class="carac-item" id='vlTotalEntMaisParc' name='vlTotalEntMaisParc'></span>
+                <input type="hidden" name="resvlTotalEntMaisParc" id="resvlTotalEntMaisParc">
               </div>
               <div class="btn-verificar float-left color-white"  onclick="somarValoresV2()">Calcular</div>
               <div class="btn-verificar">
@@ -131,6 +135,7 @@ if(isset($_GET['id'])) {
         </div>
       </div>
     </section>
+    
     <footer>
       <script src="assets/js/pagamento.js"></script>
     </footer>
