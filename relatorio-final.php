@@ -26,25 +26,17 @@ if(isset($_POST['id'])) {
 }
 
 
-$resvlCadaParcela = $_POST['resvlCadaParcela'];
-$resvlTotalFinanciado = $_POST['resvlTotalFinanciado'];
-$resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'];
-$resmultiplicador = $_POST['resmultiplicador'];
-echo '<br>valor vl total financiado'.$resvlTotalFinanciado;
-echo '<br>valor cada parcela'.$resvlCadaParcela;
-echo '<br>valor vl total ent mais parc'.$resvlTotalEntMaisParc;
-echo '<br>qtd parcelas'.$resmultiplicador;
 
 
 if(isset($_POST['id'])){
   echo '<br>'.'id: '. $id_carro = ($_POST['id']);
   echo '<br>'.'nome: '. $nomeCompleto = ($_POST['nome']);
+  echo '<br>'.'cpf: '. $cpf = ($_POST['cpf']);
   echo '<br>'.'endereco: '. $endereco = ($_POST['endereco']);
   echo '<br>'.'numero: '. $numero = ($_POST['numero']);
   echo '<br>'.'complemento: '. $complemento = ($_POST['complemento']);
   echo '<br>'.'bairro: '. $bairro = ($_POST['bairro']);
   echo '<br>'.'cidade: '. $cidade = ($_POST['cidade']);
-  echo '<br>'.'cpf: '. $cpf = ($_POST['cpf']);
   echo '<br>'.'nomeImpressoCartao: '. $nomeImpressoCartao = ($_POST['nomeImpressoCartao']);
   echo '<br>'.'numeroCartao: '. $numeroCartao = ($_POST['numeroCartao']);
   echo '<br>'.'validade: '. $validade = ($_POST['validade']);
@@ -52,16 +44,28 @@ if(isset($_POST['id'])){
 }else{
   echo 'não foi passado id';
 }
+$resvlEntrada = $_POST['resvlEntrada'];
+$juros = $_POST['juros'];
+$resmultiplicador = $_POST['resmultiplicador'];
+$resvlCadaParcela = $_POST['resvlCadaParcela'];
+$resvlTotalFinanciado = $_POST['resvlTotalFinanciado'];
+$resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'];
+echo '<br>valor entrada '.$resvlEntrada;
+echo '<br>valor juros '.$juros;
+echo '<br>qtd parcelas'.$resmultiplicador;
+echo '<br>valor cada parcela'.$resvlCadaParcela;
+echo '<br>valor vl total financiado'.$resvlTotalFinanciado;
+echo '<br>valor vl total ent mais parc'.$resvlTotalEntMaisParc;
 
 ///////////////////////////////
-$sql = "INSERT INTO forma_pagamento (Nome_completo, fk_id_carro) VALUES (?, ?)";
+$sql = "INSERT INTO forma_pagamento (Nome_completo, cpf,endereço,numero,complemento,bairro,cidade,nome_impresso, num_cartao,validade, cod_verificador,vl_entrada,juros,qtd_parcelas,valor_cada_parcela,valor_t_parcela,vl_total_ent_mais_parc,fk_id_carro) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 $stmt = $conexao->prepare($sql);
-$stmt->bind_param("si", $nomeCompleto, $id_carro);
+$stmt->bind_param("sisissssiiiiiiiiii", $nomeCompleto, $cpf, $endereco,$numero,$complemento,$bairro,$cidade,$nomeImpressoCartao,$numeroCartao,$validade,$codigoVerificador,$resvlEntrada,$juros,$resmultiplicador,$resvlCadaParcela,$resvlTotalFinanciado,$resvlTotalEntMaisParc,$id_carro);
 
 // Executar a consulta
 if ($stmt->execute()) {
-    echo "Valor atualizado com sucesso!";
+    echo "<br> Valor atualizado com sucesso!";
 } else {
     echo "Erro ao atualizar: " . $stmt->error;
 }
@@ -143,24 +147,25 @@ $conexao->close();
                 <span class="bold">Valor a vista</span><br>
                 <span class="desc">R$ <?php echo $carro['valor'] ;?></span>
               </div>
-              <!-- <div class="item">
+              <div class="item">
                 <span class="bold">Valor da Parcela</span><br>
-                <span class="desc">36 x R$ 33.000,00</span>
+                <span class="desc"><?php echo $resmultiplicador;?> x R$ <?php echo $resvlCadaParcela;?></span>
               </div>
               <div class="item">
                 <span class="bold">Total a prazo</span><br>
-                <span class="desc">R$ 36.000,00</span>
+                <span class="desc">R$ <?php echo $resvlTotalEntMaisParc;?></span>
               </div>
+              
               <div class="item">
                 <span class="bold">Valor de entrada</span><br>
-                <span class="desc">R$ 800,00</span>
+                <span class="desc">R$ <?php echo $resvlEntrada;?></span>
               </div>
               <div class="item">
                 <span class="bold">Valor de entrada mais parcelamento</span><br>
-                <span class="desc">R$ 39.000,00</span>
-              </div> -->
+                <span class="desc">R$ <?php echo $resvlTotalEntMaisParc;?></span>
+              </div>
             </div>
-          </div>    
+          </div>   
           <div class="col-12">
             <div class="btn-verificar">
               <a href=""  onclick="imprimirPagina()">Imprimir</a>

@@ -80,7 +80,7 @@ if(isset($_GET['id'])) {
               </div>
               <div class="item">
                 <span>juros</span><br>
-                <input type="text" id='juros' value="10"><br>
+                <input type="text" id='juros' name='juros' value="10"><br>
                 <span class="carac-item">Qtde. de parcelas</span>
                 <div class="radiobtn">                  
                   <div class="">

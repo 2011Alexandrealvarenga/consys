@@ -7,6 +7,8 @@ if(isset($_POST['id'])){
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(isset($_POST['juros']) ? $juros = $_POST['juros'] : "vl juros" );
+  if(isset($_POST['vlEntrada']) ? $resvlEntrada = $_POST['vlEntrada'] : "vl entrada nao enviado" );
   if(isset($_POST['resvlCadaParcela']) ? $resvlCadaParcela = $_POST['resvlCadaParcela'] : "valor nao enviado Valor Cada Parcela" );
   if(isset($_POST['resvlTotalFinanciado']) ? $resvlTotalFinanciado = $_POST['resvlTotalFinanciado'] : "valor nao enviado Valor Cada Parcela" );
   if(isset($_POST['resvlTotalEntMaisParc']) ? $resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'] : "valor nao enviado Valor Cada Parcela" );
@@ -16,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 echo 'id: '.$id;
+echo '<br>valor juros: '.$juros;
+echo '<br>valor entrada: '.$resvlEntrada;
 echo '<br>valor cada parcela: '.$resvlCadaParcela;
 echo '<br>valor total financiado: '.$resvlTotalFinanciado;
 echo '<br>valor total total ent mais parc: '.$resvlTotalEntMaisParc;
@@ -110,6 +114,8 @@ echo '<br>qtd parcelas: '.$resmultiplicador;
                   <div class="btn-verificar">
                     <button type="submit">Comprar</button>
                   </div>     
+                  <input type="hidden" name="juros" value='<?php echo $juros;?>'>
+                  <input type="hidden" name="resvlEntrada" value='<?php echo $resvlEntrada;?>'>
                   <input type="hidden" name="resvlCadaParcela" value='<?php echo $resvlCadaParcela;?>'>
                   <input type="hidden" name="resvlTotalFinanciado" value='<?php echo $resvlTotalFinanciado;?>'>
                   <input type="hidden" name="resvlTotalEntMaisParc" value='<?php echo $resvlTotalEntMaisParc;?>'>
