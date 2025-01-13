@@ -26,9 +26,18 @@ if(isset($_POST['id'])) {
 }
 
 
+$resvlCadaParcela = $_POST['resvlCadaParcela'];
+$resvlTotalFinanciado = $_POST['resvlTotalFinanciado'];
+$resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'];
+$resmultiplicador = $_POST['resmultiplicador'];
+echo '<br>valor vl total financiado'.$resvlTotalFinanciado;
+echo '<br>valor cada parcela'.$resvlCadaParcela;
+echo '<br>valor vl total ent mais parc'.$resvlTotalEntMaisParc;
+echo '<br>qtd parcelas'.$resmultiplicador;
+
 
 if(isset($_POST['id'])){
-  echo 'id: '. $id_carro = ($_POST['id']);
+  echo '<br>'.'id: '. $id_carro = ($_POST['id']);
   echo '<br>'.'nome: '. $nomeCompleto = ($_POST['nome']);
   echo '<br>'.'endereco: '. $endereco = ($_POST['endereco']);
   echo '<br>'.'numero: '. $numero = ($_POST['numero']);

@@ -2,14 +2,6 @@
 
 if(isset($_POST['id'])){
   $id = $_POST['id'];
-  // echo '<br>'.'id: '.$modelo = $_POST['modelo'];
-  // echo '<br>'.'valor: '.$valor = $_POST['valor'];
-  // echo '<br>'.'vlEntrada: '.$vlEntrada = $_POST['vlEntrada'];
-  // echo '<br>'.'vlCadaParcela: '.$vlCadaParcela = $_POST['vlCadaParcela'];
-  // echo '<br>'.'vlTotalFinanciado: '.$vlTotalFinanciado = $_POST['vlTotalFinanciado'];
-  // echo '<br>'.'vlTotalEntMaisParc: '.$vlTotalEntMaisParc = $_POST['vlTotalEntMaisParc'];
-  // echo '<br>'.'avista: '.$avista = $_POST['avista'];
-
 }else{
   echo 'id nao enviado';
 }
@@ -23,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo "<p>Nenhum dado recebido.</p>";
 }
 
-echo '<br>id: '.$id;
+echo 'id: '.$id;
 echo '<br>valor cada parcela: '.$resvlCadaParcela;
 echo '<br>valor total financiado: '.$resvlTotalFinanciado;
 echo '<br>valor total total ent mais parc: '.$resvlTotalEntMaisParc;
@@ -117,7 +109,11 @@ echo '<br>qtd parcelas: '.$resmultiplicador;
                     </div>
                   <div class="btn-verificar">
                     <button type="submit">Comprar</button>
-                  </div>      
+                  </div>     
+                  <input type="hidden" name="resvlCadaParcela" value='<?php echo $resvlCadaParcela;?>'>
+                  <input type="hidden" name="resvlTotalFinanciado" value='<?php echo $resvlTotalFinanciado;?>'>
+                  <input type="hidden" name="resvlTotalEntMaisParc" value='<?php echo $resvlTotalEntMaisParc;?>'>
+                  <input type="hidden" name="resmultiplicador" value='<?php echo $resmultiplicador;?>'>                  
               </form>
             </div>
           </div>            
