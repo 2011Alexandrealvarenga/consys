@@ -26,4 +26,5 @@ function consultarCarros($conexao) {
     }
 }
 
+$page = basename($_SERVER['PHP_SELF']);
 ?>
