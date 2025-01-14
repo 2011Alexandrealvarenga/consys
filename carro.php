@@ -22,6 +22,7 @@ if(isset($_GET['id'])) {
 }else{
     echo 'não foi passado id';
 }
+$conexao->close();
 ?>
 <body>
     <header>
