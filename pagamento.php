@@ -124,9 +124,4 @@ if(isset($_GET['id'])) {
         </div>
       </div>
     </section>
-    
-    <footer>
-      <script src="assets/js/pagamento.js"></script>
-    </footer>
-  </body>
-</html>
+<?php require('footer.php') ;?>

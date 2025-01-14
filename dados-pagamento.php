@@ -115,7 +115,4 @@ echo '<br>qtd parcelas: '.$resmultiplicador;
         </div>
       </div>
     </section>
-    <footer>
-    </footer>
-  </body>
-</html>
+    <?php require('footer.php') ;?>

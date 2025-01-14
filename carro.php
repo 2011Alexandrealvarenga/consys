@@ -2,8 +2,6 @@
 require('header.php');
 $conexao = conectarBanco();
 
-// $info = [];
-// $id = isset($_GET['id']);
 if ($conexao->connect_error) {
     die("Conexão falhou: " . $conexao->connect_error);
 }
@@ -24,8 +22,6 @@ if(isset($_GET['id'])) {
 }else{
     echo 'não foi passado id';
 }
-
-
 ?>
 <body>
     <header>
@@ -94,7 +90,4 @@ if(isset($_GET['id'])) {
             </div>
         </div>
     </section>
-    <footer>
-    </footer>
-</body>
-</html>
+<?php require('footer.php') ;?>

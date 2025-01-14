@@ -47,7 +47,4 @@ $conexao->close();
             </div>
         </div>
     </section>
-    <footer>
-    </footer>
-</body>
-</html>
+<?php require('footer.php') ;?>

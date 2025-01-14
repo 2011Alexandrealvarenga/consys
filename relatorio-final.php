@@ -1,10 +1,6 @@
 <?php 
-include('inc/classes/config.php');
-
+require('header.php');
 $conexao = conectarBanco();
-
-// $info = [];
-// $id = isset($_GET['id']);
 if ($conexao->connect_error) {
     die("Conexão falhou: " . $conexao->connect_error);
 }
@@ -25,9 +21,6 @@ if(isset($_POST['id'])) {
 }else{
     echo 'não foi passado id';
 }
-
-
-
 
 if(isset($_POST['id'])){
   echo '<br>'.'id: '. $id_carro = ($_POST['id']);
@@ -162,8 +155,4 @@ $conexao->close();
         </div>
       </div>
     </section>
-    <footer>
-      <script src="assets/js/relatorio-final.js"></script>
-    </footer>
-  </body>
-</html>
+<?php require('footer.php') ;?>
