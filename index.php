@@ -6,10 +6,7 @@ $conexao = conectarBanco();
 $dados_carro = consultarCarros($conexao);
 
 $conexao->close();
-
-
 ;?>
-
 <body>
     <header>
         <div class="container">
