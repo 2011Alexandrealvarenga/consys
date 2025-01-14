@@ -153,7 +153,7 @@ $conexao->close();
               </div>
               <div class="item">
                 <span class="bold">Total a prazo</span><br>
-                <span class="desc">R$ <?php echo $resvlTotalEntMaisParc;?></span>
+                <span class="desc">R$ <?php echo $resvlTotalFinanciado;?></span>
               </div>
               
               <div class="item">
@@ -168,7 +168,7 @@ $conexao->close();
           </div>   
           <div class="col-12">
             <div class="btn-verificar">
-              <a href=""  onclick="imprimirPagina()">Imprimir</a>
+              <button onclick="simularCtrlP()">Simular Ctrl + P</button>
             </div>      
           </div>
         </div>
