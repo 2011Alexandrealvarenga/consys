@@ -19,9 +19,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
     } else {
         echo "Item não encontrado.";
     }
-} else {
-    echo "Por favor, preencha todos os campos.";
-}
+} 
 ;?>
 <body>
     <header>
