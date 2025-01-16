@@ -1,3 +1,13 @@
 .borda{
   border: 1px solid black;
 }
+.login .content{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .content form {
+  padding: 16px;
+  width: 100%;
+}

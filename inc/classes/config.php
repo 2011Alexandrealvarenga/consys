@@ -13,7 +13,7 @@ function conectarBanco() {
 
     return $conexao;
 }
-
+$page = basename($_SERVER['PHP_SELF']);
 
 function consultarCarros($conexao) {
     $sql = "SELECT * FROM carro"; 
@@ -25,6 +25,10 @@ function consultarCarros($conexao) {
         return null; 
     }
 }
+function login($login, $senha, $conexao){
+     $sql = "SELECT * FROM login WHERE login = '$login' AND senha = '$senha'";
+     $result = $conexao->query($sql);
+     return $result;
+}
 
-$page = basename($_SERVER['PHP_SELF']);
 ?>
