@@ -22,7 +22,7 @@ $conexao->close();
             <div class="row">
                 <div class="col-12">
                     <div class="content">
-                        <form action="carro-cadastro-envio.php" method="POST">
+                        <form action="carro-cadastro-envio.php" method="POST"  enctype="multipart/form-data">
                             <label for="marca">Marca</label><br>
                             <input type="text" name="marca" id="marca"><br>
 
@@ -53,22 +53,24 @@ $conexao->close();
                             <input type="text" name="cor" id="cor"><br>
 
                             <label for="placa_final">Placa Final</label><br>
-                            <input type="text" name="placa_final" id="placa_final"><br>
+                                <select name="placa_final" id="placa_final">                                
+                                <?php foreach ( $placas as $placa ) {?>
+                                    <option value="<?php echo $placa ;?>"><?php echo $placa ;?></option>                                 
+                                    <?php };?>
+                                </select><br>
 
                             <label for="ano_modelo">Ano de Modelo</label><br>
                             <select name="ano_modelo" id="ano_modelo">
-                                <?php foreach ( $placas as $placa ) {?>
-                                <option value="<?php echo $placa ;?>"><?php echo $placa ;?></option>                                 
+                                <?php foreach ( $anos as $ano ) {?>
+                                    <option value="<?php echo $ano ;?>"><?php echo $ano ;?></option>                                 
                                 <?php };?>
                             </select><br><br>
 
                             <label for="cambio">Câmbio</label><br>
                             <input type="text" name="cambio" id="cambio"><br>
                             
-                            <label for="imagem">Imagem</label><br>
-                            <input type="text" name="imagem" id="imagem"><br>
-
-                            
+                            <label for="image">Imagem</label><br>
+                            <input type="file" name="image" id="image"><br>                            
 
                             <button>Cadastrar</button>
                         </form>                       
