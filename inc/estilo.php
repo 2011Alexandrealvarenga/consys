@@ -12,4 +12,6 @@ if($page == 'index.php'){?>
   <link rel="stylesheet" href="assets/css/pagamento.css">
 <?php } elseif($page == 'login.php'){?>
   <link rel="stylesheet" href="assets/css/login.css">
+<?php } elseif($page == 'venda-lista.php'){?>
+  <link rel="stylesheet" href="assets/css/venda-lista.css">
 <?php }?>

@@ -18,6 +18,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="carro-cadastro.php">Cadastrar Carro</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="venda-lista.php">Lista de vendas</a>
+              </li>
             </ul>
           </div>
         </nav>
