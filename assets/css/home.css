@@ -1,11 +1,17 @@
 .lista-carro .content-item-carro .item{
   padding: 8px;
   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  height: 530px;
+}
+.lista-carro .content-item-carro .item .lista{
+  margin-top: 16px;
 }
 .lista-carro .content-item-carro .item .img-carro{
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 .lista-carro .content-item-carro .item ul {
   margin: 0;
@@ -14,6 +20,11 @@
 }
 .btn-verificar {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
+}
+.lista-carro .content-item-carro .item .modelo {
+  font-size: 24px;
+  text-align: center;
+  margin: 24px 0;
 }

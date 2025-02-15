@@ -53,18 +53,11 @@ $conexao->close();
                             <input type="text" name="cor" id="cor"><br>
 
                             <label for="placa_final">Placa Final</label><br>
-                                <select name="placa_final" id="placa_final">                                
-                                <?php foreach ( $placas as $placa ) {?>
-                                    <option value="<?php echo $placa ;?>"><?php echo $placa ;?></option>                                 
-                                    <?php };?>
-                                </select><br>
-
-                            <label for="ano_modelo">Ano de Modelo</label><br>
-                            <select name="ano_modelo" id="ano_modelo">
-                                <?php foreach ( $anos as $ano ) {?>
-                                    <option value="<?php echo $ano ;?>"><?php echo $ano ;?></option>                                 
+                            <select name="placa_final" id="placa_final">                                
+                            <?php foreach ( $placas as $placa ) {?>
+                                <option value="<?php echo $placa ;?>"><?php echo $placa ;?></option>                                 
                                 <?php };?>
-                            </select><br><br>
+                            </select><br>                            
 
                             <label for="cambio">Câmbio</label><br>
                             <input type="text" name="cambio" id="cambio"><br>

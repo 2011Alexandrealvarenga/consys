@@ -26,9 +26,9 @@ $conexao->close();
                             <div class="item">
                                 <img src="assets/img/<?php echo $car['imagem'] ;?>" class="img-carro">
                                 <div class="lista">
-                                    <p><b>id:</b> <?php echo $car['id'] ;?></p>
-                                    <p><b>Marca:</b> <?php echo $car['marca'] ;?></p>
-                                    <p><b>Modelo:</b> <?php echo $car['modelo'] ;?></p>
+                                    <p class="d-none"><b>id:</b> <?php echo $car['id'] ;?></p>
+                                    <p class="modelo"><b> <?php echo $car['modelo'] ;?></b></p>
+                                    <p><b>Marca:</b> <?php echo $car['marca'] ;?> </p>
                                     <p><b>Ano fabricação:</b> <?php echo $car['ano_fabricacao'] ;?></p>
                                     <p><b>Ano Modelo:</b> <?php echo $car['ano_modelo'] ;?></p>
                                     <p><b>Quilometragem:</b> Km:<?php echo $car['quilometragem'] ;?></p>

@@ -7,13 +7,16 @@ p{margin: 0;}
 .bold{font-weight: bold;}
 .btn-verificar{
   padding: 4px 8px;
-  background: blue;
+  background: #2e2d37;
   font-weight: bold;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
   width: 100px;
   float: right;
+}
+.btn-verificar:hover{
+  background: #6a6977;
 }
 .btn-verificar a{color: white;}
 .btn-verificar a:hover{text-decoration: none;}
