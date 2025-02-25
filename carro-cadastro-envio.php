@@ -75,7 +75,9 @@ $stmt->bind_param('ssiiiisiss', $marca,$modelo,$valor,$ano_fabricacao,$ano_model
 
 // Executar a consulta
 if ($stmt->execute()) {
+    header('Location: carro-cadastro.php');
     echo "<br> Valor atualizado com sucesso!";
+    exit;
 } else {
     echo "Erro ao atualizar: " . $stmt->error;
 }

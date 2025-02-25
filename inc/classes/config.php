@@ -31,4 +31,3 @@ function login($login, $senha, $conexao){
      return $result;
 }
 
-?>
