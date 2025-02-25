@@ -4,6 +4,9 @@ h4{font-size: 24px!important; text-align: center; padding: 8px 0;}
 h4{font-size: 16px!important; text-align: center; padding: 8px 0;}
 label{margin: 0;}
 p{margin: 0;}
+section.menu {
+  background: #f8f9fa;
+}
 .bold{font-weight: bold;}
 .btn-verificar{
   padding: 4px 8px;
@@ -21,7 +24,7 @@ p{margin: 0;}
 .btn-verificar a{color: white;}
 .btn-verificar a:hover{text-decoration: none;}
 header{
-  padding: 0 0 60px 0;
+  padding: 20px 0;
   background: #f2f2f2;
 }
 footer{
