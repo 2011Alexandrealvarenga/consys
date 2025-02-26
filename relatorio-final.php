@@ -23,18 +23,18 @@ if(isset($_POST['id'])) {
 }
 
 if(isset($_POST['id'])){
-  echo '<br>'.'id: '. $id_carro = ($_POST['id']);
-  echo '<br>'.'nome: '. $nomeCompleto = ($_POST['nome']);
-  echo '<br>'.'cpf: '. $cpf = ($_POST['cpf']);
-  echo '<br>'.'endereco: '. $endereco = ($_POST['endereco']);
-  echo '<br>'.'numero: '. $numero = ($_POST['numero']);
-  echo '<br>'.'complemento: '. $complemento = ($_POST['complemento']);
-  echo '<br>'.'bairro: '. $bairro = ($_POST['bairro']);
-  echo '<br>'.'cidade: '. $cidade = ($_POST['cidade']);
-  echo '<br>'.'nomeImpressoCartao: '. $nomeImpressoCartao = ($_POST['nomeImpressoCartao']);
-  echo '<br>'.'numeroCartao: '. $numeroCartao = ($_POST['numeroCartao']);
-  echo '<br>'.'validade: '. $validade = ($_POST['validade']);
-  echo '<br>'.'codigoVerificador: '. $codigoVerificador = ($_POST['codigoVerificador']);
+  $id_carro = ($_POST['id']);
+  $nomeCompleto = ($_POST['nome']);
+  $cpf = ($_POST['cpf']);
+  $endereco = ($_POST['endereco']);
+  $numero = ($_POST['numero']);
+  $complemento = ($_POST['complemento']);
+  $bairro = ($_POST['bairro']);
+  $cidade = ($_POST['cidade']);
+  $nomeImpressoCartao = ($_POST['nomeImpressoCartao']);
+  $numeroCartao = ($_POST['numeroCartao']);
+  $validade = ($_POST['validade']);
+  $codigoVerificador = ($_POST['codigoVerificador']);
 }else{
   echo 'não foi passado id';
 }
@@ -44,12 +44,6 @@ $resmultiplicador = $_POST['resmultiplicador'];
 $resvlCadaParcela = $_POST['resvlCadaParcela'];
 $resvlTotalFinanciado = $_POST['resvlTotalFinanciado'];
 $resvlTotalEntMaisParc = $_POST['resvlTotalEntMaisParc'];
-echo '<br>valor entrada '.$resvlEntrada;
-echo '<br>valor juros '.$juros;
-echo '<br>qtd parcelas'.$resmultiplicador;
-echo '<br>valor cada parcela'.$resvlCadaParcela;
-echo '<br>valor vl total financiado'.$resvlTotalFinanciado;
-echo '<br>valor vl total ent mais parc'.$resvlTotalEntMaisParc;
 
 ///////////////////////////////
 $sql = "INSERT INTO forma_pagamento (Nome_completo, cpf,endereço,numero,complemento,bairro,cidade,nome_impresso, num_cartao,validade, cod_verificador,vl_entrada,juros,qtd_parcelas,valor_cada_parcela,valor_t_parcela,vl_total_ent_mais_parc,fk_id_carro) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -59,7 +53,7 @@ $stmt->bind_param("sisissssiiiiiiiiii", $nomeCompleto, $cpf, $endereco,$numero,$
 
 // Executar a consulta
 if ($stmt->execute()) {
-    echo "<br> Valor atualizado com sucesso!";
+   "<br> Valor atualizado com sucesso!";
 } else {
     echo "Erro ao atualizar: " . $stmt->error;
 }

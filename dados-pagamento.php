@@ -18,14 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo "<p>Nenhum dado recebido.</p>";
 }
 
-echo 'id: '.$id;
-echo '<br>valor juros: '.$juros;
-echo '<br>valor entrada: '.$resvlEntrada;
-echo '<br>valor cada parcela: '.$resvlCadaParcela;
-echo '<br>valor total financiado: '.$resvlTotalFinanciado;
-echo '<br>valor total total ent mais parc: '.$resvlTotalEntMaisParc;
-echo '<br>qtd parcelas: '.$resmultiplicador;
-// echo '<br>Valor a vista R$: '.$valoraVista;
 ;?>
 
   <body>
