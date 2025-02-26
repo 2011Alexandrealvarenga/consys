@@ -96,9 +96,6 @@ $conexao->close();
                             </select><br>                            
 
                             <label for="cambio">Câmbio</label><br>
-                            <input type="text" name="cambio" id="cambio"><br>
-
-                            <label for="cambio">Câmbio</label><br>
                             <select name="cambio" id="cambio">
                                 <?php foreach ( $cambios as $cambio ) {?>
                                 <option value="<?php echo $cambio ;?>"><?php echo $cambio ;?></option>                                 
@@ -113,6 +110,7 @@ $conexao->close();
                     </div>
                 </div>
             </div>
+            <hr>
             <div class="row">   
                 <div class="col">
                     <h3 class="title text-center">Lista de vendas</h3>
@@ -120,7 +118,6 @@ $conexao->close();
                         <tr>
                             <th>ID</th>
                             <th class="text-align-center">Modelo</th>
-                            <th>Modelo</th>
                             <th>Valor</th>
                             <th>Ano Fab</th>
                             <th>Ano Modelo</th>
@@ -141,6 +138,7 @@ $conexao->close();
                                 <td><?php echo $carro['placa_final'] ;?></td>
                                 <td><?php echo $carro['cambio'] ;?></td>
                                 <td>
+                                    <a href="editar-carro.php?id=<?php echo $carro['id']; ?>">Editar</a>
                                     <a href="?excluir=<?php echo $carro['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
                                 </td>
                             </tr>                        
