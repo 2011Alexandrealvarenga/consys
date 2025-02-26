@@ -1,4 +1,8 @@
+.lista-carro {
+  min-height: 80vh;
+}
 table, th, tr, td {
   border: 1px solid black;
   text-align: center;
+  padding: 4px;
 }
